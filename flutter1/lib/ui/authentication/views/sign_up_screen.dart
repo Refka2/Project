@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/Views/SignIn/sign_in_screen.dart';
-import 'package:flutter1/Views/SignUp/background.dart';
-import 'package:flutter1/Views/SignUp/button.dart';
-import '../../colors.dart';
-import 'field.dart';
-import 'package:flutter1/Views/SignUp/form_validation.dart';
-import 'have_an_account.dart';
+import 'package:flutter1/ui/authentication/views/sign_in_screen.dart';
+import 'package:flutter1/ui/authentication/widgets/have_an_account.dart';
+import 'package:flutter1/ui/shared/widgets/background.dart';
+import 'package:flutter1/ui/shared/widgets/button.dart';
+import 'package:flutter1/ui/shared/widgets/field.dart';
+import 'package:flutter1/ui/shared/widgets/form_validation.dart';
+import 'package:flutter1/ui/ui_utils/colors.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({Key? key}) : super(key: key);
@@ -44,7 +44,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     Size size= MediaQuery.of(context).size;
-    //FocusManager.instance.primaryFocus?.unfocus();
     return Background(
       child: Form(
         key: _key,
@@ -141,7 +140,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 //   isObscure= ! isObscure
                 //   Icon(isObscure ?Icons.visibility_off : Icons.visibility)
                 // },
-                suffixIcon: Icons.visibility_off,
+                suffixIcon: Icons.visibility_off ,
               ),
               Field(
                 validate: validateConfirm,
@@ -155,6 +154,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Button(
+                      width: size.width *0.8,
                       text: "SIGN UP",
                         onPressed:()=>{
                           if(_key.currentState!.validate()){
@@ -171,18 +171,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       MaterialPageRoute(
                       builder: (context){
                       return const SignInScreen();
-                      },
-                      ),
+                      },),
                       );
                     },
                   ),
                 ],
-
               )
-    ],
-    ),
+            ],
+           ),
         ),
-    ),
+      ),
     );
   }
 }

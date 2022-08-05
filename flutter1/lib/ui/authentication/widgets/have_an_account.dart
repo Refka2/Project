@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-
-import '../../colors.dart';
+import 'package:flutter1/ui/ui_utils/colors.dart';
 
 class HaveAnAccount extends StatelessWidget {
-  final bool login;
-  final VoidCallback onPressed;
+
   const HaveAnAccount({
     Key? key,
     this.login= true,
     required this.onPressed,
   }) : super(key: key);
-
+  final bool login;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     Size size= MediaQuery.of(context).size;

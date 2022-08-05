@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter1/colors.dart';
+import 'package:flutter1/ui/ui_utils/colors.dart';
 class Field extends StatelessWidget {
   final String hintText;
   final IconData? icon, suffixIcon;
   final FormFieldValidator<String> validate;
   final TextInputType? keyboardType;
   final  bool? obscureText;
-   const Field({
+  const Field({
     Key? key,
     required this.hintText,
      this.icon,
@@ -59,8 +59,8 @@ class Field extends StatelessWidget {
             ),
             // suffixIcon: GestureDetector(
             //   onTap: (){
-            //     onPressed = ! onPressed!;
-            //     Icon(onPressed ? Icons.visibility_off : Icons.visibility);
+            //     press = ! press;
+            //     Icon(press ? Icons.visibility_off : Icons.visibility);
             //   },
             // ),
 

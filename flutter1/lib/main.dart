@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter1/ui/profile/views/edit_profile.dart';
+import 'package:flutter1/ui/ui_utils/colors.dart';
 
-import 'Views/SignUp/sign_up_screen.dart';
-import 'colors.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         primaryColor: lightGray,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: const SignUpScreen(),
+      home: const EditProfile(),
     );
   }
 }
